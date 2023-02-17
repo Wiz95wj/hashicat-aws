@@ -39,7 +39,3 @@ module "s3_bucket" {
   create_bucket = false
   # ... omitted
 }
-inputs = {
-  bucket    = "foobar"            # `bucket` has type `string`, no need to jsonencode()
-  cors_rule = jsonencode([...])   # `cors_rule` has type `any`, so `jsonencode()` is required
-}
